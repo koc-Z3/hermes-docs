@@ -1,4 +1,4 @@
-# Hermes Docs
+# Hermes Docs Skill
 
 <div align="right">
 
@@ -6,22 +6,22 @@
 
 </div>
 
-A lightweight documentation navigator for [Hermes Agent](https://hermes-agent.nousresearch.com/docs).
+A documentation navigator for [Hermes Agent](https://hermes-agent.nousresearch.com/docs).
 
-## Purpose
+## What It Solves
 
-This skill helps Hermes Agent answer documentation, setup, and configuration questions efficiently. It first searches the compact documentation index, then retrieves only the relevant page—avoiding unnecessary context usage.
+1. Lets the `hermes-docs` skill help Hermes Agent answer any questions about documentation, installation, and configuration.
+2. Reduces model hallucinations during configuration.
 
 ## How It Works
 
 1. Search [`llms.txt`](https://hermes-agent.nousresearch.com/docs/llms.txt) for the relevant documentation path.
-2. Fetch only the matching page.
-3. Read the relevant sections and provide a focused answer.
+2. Fetch only the matching document.
+3. Read only the relevant sections of that matched page, and provide a focused answer with clear guidance.
 
 ## Key Benefits
 
-- Minimizes token and context usage
-- Avoids loading the full documentation bundle
-- Produces faster, more targeted answers
+- Avoids loading the full documentation bundle, saving context.
+- Enables efficient configuration with fewer hallucinations.
 
 See [`hermes-docs.md`](./hermes-docs.md) for the complete skill instructions.
