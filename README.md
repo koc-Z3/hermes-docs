@@ -1,5 +1,11 @@
 # Hermes Docs
 
+<div align="right">
+
+**English** | [简体中文](./README.zh-CN.md)
+
+</div>
+
 A lightweight documentation navigator for [Hermes Agent](https://hermes-agent.nousresearch.com/docs).
 
 ## Purpose
