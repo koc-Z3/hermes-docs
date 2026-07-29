@@ -1,6 +1,6 @@
 ---
 name: hermes-docs
-description: Use when the user asks for documentation, configuration files, setup guides, or details regarding Hermes Agent.
+description: Use for concise, targeted guidance on Hermes Agent setup, configuration, troubleshooting, and documentation.
 triggers:
   - "hermes agent config"
   - "hermes documentation"
