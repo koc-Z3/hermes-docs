@@ -1,4 +1,4 @@
-# Hermes Docs
+# Hermes Docs Skill
 
 <div align="right">
 
