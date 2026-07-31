@@ -72,5 +72,5 @@ hermes cron run <id>                 # manual trigger to verify it works
 
 - Authoring complex cron with skill chains, deliver targets, retry → T3 `/docs/user-guide/features/cron` and `/docs/guides/automate-with-cron`
 - Cron isn't firing on time → `hermes-agent/references/troubleshooting.md`
-- Want cron delivered to a specific platform (Telegram, Discord) → T3 `/docs/user-guide/messaging/index`
+- Want cron delivered to a specific platform (Telegram, Discord) → T3 `/docs/user-guide/messaging/`
 - Cron syntax edge cases (DST, leap seconds) → T3 `/docs/reference/faq`

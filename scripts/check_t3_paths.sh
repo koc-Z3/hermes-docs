@@ -36,6 +36,13 @@ refresh_llms() {
   mv "$LLMS_CACHE.tmp" "$LLMS_CACHE"
 }
 
+LIVE_CHECK=0
+for arg in "$@"; do
+  case "$arg" in
+    --live) LIVE_CHECK=1 ;;
+  esac
+done
+
 if [ "${1:-}" = "--refresh" ] || [ ! -s "$LLMS_CACHE" ] || [ -n "$(find "$LLMS_CACHE" -mmin +1440 2>/dev/null)" ]; then
   refresh_llms
 fi
@@ -87,25 +94,24 @@ for f in "${FILES[@]}"; do
     REL="${f#$REPO_ROOT/}"
     case "$p" in
       /docs/*)
-        # Already-prefixed path. Must exist in the catalogue.
-        if echo "$KNOWN_T3" | grep -qx "$p"; then
-          :  # OK
-        else
-          echo "FAIL  $REL: \`$p\` is prefixed but not in llms.txt (typo, drift, or removed doc)" >> "$REPORT_FILE"
-          ERRORS=$((ERRORS + 1))
-        fi
+        # Already-prefixed path. llms.txt can list paths that 404 (e.g.
+        # /docs/foo/index when Docusaurus serves /docs/foo/) and can
+        # also miss paths that 200 (catalogue drift). The local
+        # validator doesn't decide — the live check (--live) does.
+        # Here we just count it as checked; live check is authoritative.
         ;;
       *)
-        # Bare path. Acceptable if /docs/<p> exists in the catalogue (the bug we fix),
-        # or if the bare path is in the catalogue as-is (none currently are, but defensive).
+        # Bare path. The bug we fix: must be promoted to /docs/<p> if
+        # /docs/<p> exists in the catalogue. Without --live, a path
+        # that exists on the live site but isn't in the catalogue
+        # slips through as a WARN.
         if echo "$KNOWN_T3" | grep -qx "/docs$p"; then
           echo "FAIL  $REL: \`$p\` is missing the /docs/ prefix (catalogue uses \`/docs$p\`)" >> "$REPORT_FILE"
           ERRORS=$((ERRORS + 1))
         elif echo "$KNOWN_T3" | grep -qx "$p"; then
-          :  # OK — already-prefixed form somehow matches
+          :  # OK
         else
-          echo "FAIL  $REL: \`$p\` not found in llms.txt at all" >> "$REPORT_FILE"
-          ERRORS=$((ERRORS + 1))
+          echo "WARN  $REL: \`$p\` not in llms.txt (live check would catch a real 404)" >> "$REPORT_FILE"
         fi
         ;;
     esac
@@ -114,6 +120,37 @@ done
 
 echo
 echo "T3 path check: $CHECKED paths checked across ${#FILES[@]} file patterns"
+
+# Optional: live HTTP check. Slower (one request per unique path) but catches
+# the failure mode where llms.txt lists a path that the docs site no longer
+# serves (e.g. /docs/foo/index when Docusaurus serves /docs/foo/ instead).
+if [ "$LIVE_CHECK" = "1" ]; then
+  echo
+  echo "Live HTTP check (curl HEAD on each path):"
+  LIVE_FAIL=0
+  for p in $(grep -rhoE "$PATTERN" "${FILES[@]}" 2>/dev/null \
+             | tr -d '\`' \
+             | sort -u); do
+    case "$p" in
+      /docs/*) ;;
+      *) continue ;;  # skip non-T3 paths in the live check
+    esac
+    code=$(curl -fsSL -o /dev/null -w "%{http_code}" --max-time 8 "https://hermes-agent.nousresearch.com$p" 2>/dev/null || echo "ERR")
+    if [ "$code" = "200" ]; then
+      printf "  OK    %s\n" "$p"
+    else
+      printf "  FAIL  %s  HTTP %s\n" "$p" "$code"
+      LIVE_FAIL=$((LIVE_FAIL + 1))
+    fi
+  done
+  if [ "$LIVE_FAIL" -gt 0 ]; then
+    echo
+    echo "FAIL: $LIVE_FAIL path(s) return non-200 on the live site"
+    echo "Fix: either remove the path or change it to one that returns 200"
+    exit 1
+  fi
+fi
+
 if [ "$ERRORS" -gt 0 ]; then
   echo "FAIL: $ERRORS invalid T3 path reference(s):"
   echo

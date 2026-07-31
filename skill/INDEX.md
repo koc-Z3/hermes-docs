@@ -117,7 +117,7 @@ Common T3 paths:
 | Vision | `/docs/user-guide/features/vision` |
 | Image generation | `/docs/user-guide/features/image-generation` |
 | Text-to-speech | `/docs/user-guide/features/tts` |
-| Messaging platforms overview | `/docs/user-guide/messaging/index` |
+| Messaging platforms overview | `/docs/user-guide/messaging/` |
 | Telegram setup | `/docs/user-guide/messaging/telegram` |
 | Discord setup | `/docs/user-guide/messaging/discord` |
 | Slack setup (Socket Mode) | `/docs/user-guide/messaging/slack` |
@@ -129,7 +129,7 @@ Common T3 paths:
 | Mattermost setup | `/docs/user-guide/messaging/mattermost` |
 | Home Assistant setup | `/docs/user-guide/messaging/homeassistant` |
 | Webhooks for messaging | `/docs/user-guide/messaging/webhooks` |
-| Integrations overview | `/docs/integrations/index` |
+| Integrations overview | `/docs/integrations/` |
 | Providers integration | `/docs/integrations/providers` |
 | MCP (Model Context Protocol) | `/docs/user-guide/features/mcp` |
 | ACP (Agent Context Protocol) | `/docs/user-guide/features/acp` |
