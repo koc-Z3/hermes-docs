@@ -64,7 +64,7 @@ hermes sessions list --source telegram
 |---|---|---|
 | "Where do I put the bot token?" | **T1** (`references/secrets.md`) | Single-fact lookup |
 | "What env var does Telegram use?" | **T1** (`references/env-vars.md`) | Single-fact lookup |
-| "How do I create a Telegram bot?" | **T3** (`/user-guide/messaging/telegram`) | Multi-step procedure, only on the live docs |
+| "How do I create a Telegram bot?" | **T3** (`/docs/user-guide/messaging/telegram`) | Multi-step procedure, only on the live docs |
 | "How do I restart the gateway?" | **T1** (`references/gateway.md`) | Single-fact lookup |
 | "Where do the Telegram sessions go?" | **T1** (`references/sessions.md`) | Single-fact lookup |
 | "Bot isn't responding, what now?" | **T2** (`hermes-agent/references/troubleshooting.md`) | Debugging, within one system |
@@ -83,4 +83,4 @@ The agent used **T1 five times and T3 once**. T2 wasn't needed for the setup its
 - A different platform (Discord, Slack, WhatsApp) → T3 `/user-guide/messaging/<platform>` (one URL each)
 - The setup needs to span multiple platforms (Telegram + cron + Kanban) → T3 still, but the agent consults multiple catalogue pages
 - Troubleshooting a failed Telegram setup → T2 `hermes-agent/references/troubleshooting.md`
-- Adding a custom platform adapter → T3 `/developer-guide/adding-platform-adapters`
+- Adding a custom platform adapter → T3 `/docs/developer-guide/adding-platform-adapters`

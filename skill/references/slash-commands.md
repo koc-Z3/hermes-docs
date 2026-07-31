@@ -97,5 +97,5 @@ Commands available inside an interactive `hermes` chat session. They start with 
 ## Escalate to T2 when:
 
 - A command isn't in this list and isn't in `hermes --help` → `hermes-agent/references/slash-commands.md` (full registry, ~110 lines)
-- The command errors with "unknown slash command" → T3 `/reference/slash-commands` (authoritative)
-- A slash command changed behaviour between Hermes versions → T3 `/reference/faq`
+- The command errors with "unknown slash command" → T3 `/docs/reference/slash-commands` (authoritative)
+- A slash command changed behaviour between Hermes versions → T3 `/docs/reference/faq`

@@ -79,5 +79,5 @@ hermes doctor                        # checks secret presence (not values)
 - Setting up Bitwarden / 1Password integration → `hermes-agent/references/security-privacy.md`
 - Re-rotation isn't taking effect (secrets cached) → `hermes-agent/references/security-privacy.md` "session restart" notes
 - A secret is leaking into logs (redaction is failing) → `hermes-agent/references/security-privacy.md` "Secret redaction in tool output"
-- Need credential pools (multiple keys per provider, auto-rotation) → T3 `/user-guide/features/credential-pools`
-- Audit / threat model for secret storage → T3 `/user-guide/security`
+- Need credential pools (multiple keys per provider, auto-rotation) → T3 `/docs/user-guide/features/credential-pools`
+- Audit / threat model for secret storage → T3 `/docs/user-guide/security`

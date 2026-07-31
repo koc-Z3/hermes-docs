@@ -53,7 +53,7 @@ ls -la ~/.hermes/MEMORY.md ~/.hermes/USER.md
 hermes memory search "your topic"
 ```
 
-T1 (`references/memory.md`). External providers → T3 `/user-guide/features/memory-providers`.
+T1 (`references/memory.md`). External providers → T3 `/docs/user-guide/features/memory-providers`.
 
 ### 5. Skills
 
@@ -63,7 +63,7 @@ hermes skills check
 hermes skills search "domain you use"
 ```
 
-T1 (`references/skills.md`). If the user is missing a domain skill, install from the Skills Hub (T3 `/reference/skills-catalog`).
+T1 (`references/skills.md`). If the user is missing a domain skill, install from the Skills Hub (T3 `/docs/reference/skills-catalog`).
 
 ### 6. Cron
 
@@ -99,7 +99,7 @@ hermes config get security
 hermes config get platforms.<name>.allowed_users   # for each enabled platform
 ```
 
-T1 (`references/security.md`). Threat model / production hardening → T3 `/user-guide/security`.
+T1 (`references/security.md`). Threat model / production hardening → T3 `/docs/user-guide/security`.
 
 ### 10. Logs and observability
 
@@ -109,7 +109,7 @@ du -sh ~/.hermes/logs/
 hermes config get log.level
 ```
 
-T1 (`references/logs.md`). Structured logging / shipping → T3 `/docs/observability/`.
+T1 (`references/logs.md`). Structured logging / shipping → T3 `/docs/reference/faq`.
 
 ## Cost optimisation pass
 
@@ -143,7 +143,7 @@ Roughly **85% of the audit was T1**, ~10% was T2, ~5% was T3. That's the orchest
 
 ## Escalate from this example when:
 
-- The user wants a deep security audit → T3 `/user-guide/security` + `/docs/observability/`
+- The user wants a deep security audit → T3 `/docs/user-guide/security`
 - The user wants to add multi-agent orchestration (Kanban) → T2 + T3
 - The user wants a specific platform setup → T3 `/user-guide/messaging/<platform>`
 - The agent's audit finds a real problem → T2 `hermes-agent/references/troubleshooting.md`

@@ -65,5 +65,5 @@ hermes logs errors --since 10m
 
 - Doctor reports a failure and the message is unclear → `hermes-agent/references/troubleshooting.md`
 - A specific subsystem check fails (gateway, MCP, voice, memory provider) → `hermes-agent/references/troubleshooting.md`
-- Doctor --fix doesn't fix it → T3 `/reference/faq`
-- Need a different health check (e.g. relay connector, observability) → T3 `/docs/observability/`
+- Doctor --fix doesn't fix it → T3 `/docs/reference/faq`
+- Need a different health check (e.g. relay connector, observability) → T3 `/docs/reference/faq`

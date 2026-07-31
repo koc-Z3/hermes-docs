@@ -88,4 +88,4 @@ hermes config env | wc -l     # how many vars does this Hermes version know abou
 
 - You need a specific provider's env vars not listed here (gateway adapters, OAuth providers) → `hermes-agent/references/providers-and-models.md`
 - You're on Windows and env vars aren't taking effect → `hermes-agent/references/windows-quirks.md`
-- You need the authoritative env-var list for the current Hermes version → T3 `/reference/environment-variables`
+- You need the authoritative env-var list for the current Hermes version → T3 `/docs/reference/environment-variables`

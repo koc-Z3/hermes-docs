@@ -49,6 +49,6 @@ hermes logs --filter "<your-tag>"
 ## Escalate to T2 when:
 
 - Log file is huge and you need to rotate/archive → `hermes-agent/references/configuration.md`
-- Log format is unclear (structured logging, fields) → T3 `/docs/observability/`
+- Log format is unclear (structured logging, fields) → T3 `/docs/reference/faq`
 - A specific subsystem isn't logging (gateway, MCP, voice) → `hermes-agent/references/troubleshooting.md`
-- Need to ship logs to an external system (Datadog, etc.) → T3 `/docs/observability/monitoring.md`
+- Need to ship logs to an external system (Datadog, etc.) → T3 `/docs/reference/faq`

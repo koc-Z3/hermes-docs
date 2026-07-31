@@ -70,8 +70,8 @@ hermes --toolsets fs,web -q "list my tools"  # sanity check
 
 ## Escalate to T2 when:
 
-- Adding a new built-in tool (registration, handler, schema) → T3 `/developer-guide/adding-tools`
+- Adding a new built-in tool (registration, handler, schema) → T3 `/docs/developer-guide/adding-tools`
 - A tool fails to load → `hermes-agent/references/troubleshooting.md`
-- Need the full toolset reference (composite, platform, dynamic) → T3 `/reference/toolsets-reference`
-- Need a per-tool schema (parameters, return shape) → T3 `/reference/tools-reference`
+- Need the full toolset reference (composite, platform, dynamic) → T3 `/docs/reference/toolsets-reference`
+- Need a per-tool schema (parameters, return shape) → T3 `/docs/reference/tools-reference`
 - Configuring per-platform toolsets → `hermes-agent/references/configuration.md`

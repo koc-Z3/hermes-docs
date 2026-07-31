@@ -52,8 +52,8 @@ T1 files end with a "**Escalate to T2 when:**" section. If the user's question m
 
 ```
 1. Fetch  https://hermes-agent.nousresearch.com/docs/llms.txt  (~17 KB)
-2. Scan for the URL path matching the topic  (e.g. /user-guide/configuration)
-3. Fetch  https://hermes-agent.nousresearch.com/docs/<that-path>  only
+2. Scan for the URL path matching the topic  (e.g. /docs/user-guide/configuration)
+3. Fetch  https://hermes-agent.nousresearch.com<that-path>  only
 4. Read only the relevant section, answer, link the URL in the response
 ```
 

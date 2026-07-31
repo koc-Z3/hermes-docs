@@ -79,98 +79,98 @@ Common T3 paths:
 
 | Topic | Catalogue path |
 |---|---|
-| Installation matrix | `/getting-started/installation` |
-| First-run quickstart | `/getting-started/quickstart` |
-| Updating / uninstalling | `/getting-started/updating` |
-| Termux (Android) | `/getting-started/termux` |
-| Nix / NixOS module | `/getting-started/nix-setup` |
-| CLI user guide | `/user-guide/cli` |
-| TUI walkthrough | `/user-guide/tui` |
-| Configuration user guide | `/user-guide/configuration` |
-| Configuring models | `/user-guide/configuring-models` |
-| Sessions user guide | `/user-guide/sessions` |
-| Profiles user guide | `/user-guide/profiles` |
-| Git worktrees for parallel agents | `/user-guide/git-worktrees` |
-| Docker backend | `/user-guide/docker` |
-| Security model | `/user-guide/security` |
-| Checkpoints & rollback | `/user-guide/checkpoints-and-rollback` |
-| Features overview | `/user-guide/features/overview` |
-| Tools overview | `/user-guide/features/tools` |
-| Skills system | `/user-guide/features/skills` |
-| Curator (skill maintenance) | `/user-guide/features/curator` |
-| Memory | `/user-guide/features/memory` |
-| Memory providers | `/user-guide/features/memory-providers` |
-| Context files (the feature, not the bug) | `/user-guide/features/context-files` |
-| Context references (@-syntax) | `/user-guide/features/context-references` |
-| Personality & SOUL.md | `/user-guide/features/personality` |
-| Plugins | `/user-guide/features/plugins` |
-| Built-in plugins | `/user-guide/features/built-in-plugins` |
-| Cron jobs | `/user-guide/features/cron` |
-| Delegation | `/user-guide/features/delegation` |
-| Kanban multi-agent | `/user-guide/features/kanban` |
-| Persistent goals (Ralph loop) | `/user-guide/features/goals` |
-| Code execution | `/user-guide/features/code-execution` |
-| Hooks | `/user-guide/features/hooks` |
-| Batch processing | `/user-guide/features/batch-processing` |
-| Voice mode | `/user-guide/features/voice-mode` |
-| Browser | `/user-guide/features/browser` |
-| Vision | `/user-guide/features/vision` |
-| Image generation | `/user-guide/features/image-generation` |
-| Text-to-speech | `/user-guide/features/tts` |
-| Messaging platforms overview | `/user-guide/messaging/index` |
-| Telegram setup | `/user-guide/messaging/telegram` |
-| Discord setup | `/user-guide/messaging/discord` |
-| Slack setup (Socket Mode) | `/user-guide/messaging/slack` |
-| WhatsApp setup | `/user-guide/messaging/whatsapp` |
-| Signal setup | `/user-guide/messaging/signal` |
-| Email setup (IMAP/SMTP) | `/user-guide/messaging/email` |
-| SMS setup (Twilio) | `/user-guide/messaging/sms` |
-| Matrix setup | `/user-guide/messaging/matrix` |
-| Mattermost setup | `/user-guide/messaging/mattermost` |
-| Home Assistant setup | `/user-guide/messaging/homeassistant` |
-| Webhooks for messaging | `/user-guide/messaging/webhooks` |
-| Integrations overview | `/integrations/index` |
-| Providers integration | `/integrations/providers` |
-| MCP (Model Context Protocol) | `/user-guide/features/mcp` |
-| ACP (Agent Context Protocol) | `/user-guide/features/acp` |
-| API server (OpenAI-compatible) | `/user-guide/features/api-server` |
-| Honcho memory | `/user-guide/features/honcho` |
-| Provider routing | `/user-guide/features/provider-routing` |
-| Fallback providers | `/user-guide/features/fallback-providers` |
-| Credential pools | `/user-guide/features/credential-pools` |
-| Tips & best practices | `/guides/tips` |
-| Local LLMs on Mac | `/guides/local-llm-on-mac` |
-| Daily briefing bot tutorial | `/guides/daily-briefing-bot` |
-| Team Telegram assistant tutorial | `/guides/team-telegram-assistant` |
-| Use Hermes as a Python library | `/guides/python-library` |
-| Use MCP with Hermes | `/guides/use-mcp-with-hermes` |
-| Use voice mode with Hermes | `/guides/use-voice-mode-with-hermes` |
-| Use SOUL.md with Hermes | `/guides/use-soul-with-hermes` |
-| Build a Hermes plugin | `/guides/build-a-hermes-plugin` |
-| Automate with cron | `/guides/automate-with-cron` |
-| Work with skills | `/guides/work-with-skills` |
-| Delegation patterns | `/guides/delegation-patterns` |
-| GitHub PR review agent | `/guides/github-pr-review-agent` |
-| Architecture (developer) | `/developer-guide/architecture` |
-| Agent loop walkthrough | `/developer-guide/agent-loop` |
-| Prompt assembly | `/developer-guide/prompt-assembly` |
-| Context compression & caching | `/developer-guide/context-compression-and-caching` |
-| Gateway internals | `/developer-guide/gateway-internals` |
-| Session storage | `/developer-guide/session-storage` |
-| Provider runtime | `/developer-guide/provider-runtime` |
-| Adding a tool | `/developer-guide/adding-tools` |
-| Adding a provider | `/developer-guide/adding-providers` |
-| Adding a platform adapter | `/developer-guide/adding-platform-adapters` |
-| Creating a skill | `/developer-guide/creating-skills` |
-| Extending the CLI | `/developer-guide/extending-the-cli` |
-| CLI commands (authoritative) | `/reference/cli-commands` |
-| Slash commands (authoritative) | `/reference/slash-commands` |
-| Profile commands | `/reference/profile-commands` |
-| Environment variables (authoritative) | `/reference/environment-variables` |
-| Tools reference | `/reference/tools-reference` |
-| Toolsets reference | `/reference/toolsets-reference` |
-| MCP config reference | `/reference/mcp-config-reference` |
-| Model catalog | `/reference/model-catalog` |
-| Bundled skills catalog (~90) | `/reference/skills-catalog` |
-| Optional skills catalog (~60) | `/reference/optional-skills-catalog` |
-| FAQ & troubleshooting | `/reference/faq` |
+| Installation matrix | `/docs/getting-started/installation` |
+| First-run quickstart | `/docs/getting-started/quickstart` |
+| Updating / uninstalling | `/docs/getting-started/updating` |
+| Termux (Android) | `/docs/getting-started/termux` |
+| Nix / NixOS module | `/docs/getting-started/nix-setup` |
+| CLI user guide | `/docs/user-guide/cli` |
+| TUI walkthrough | `/docs/user-guide/tui` |
+| Configuration user guide | `/docs/user-guide/configuration` |
+| Configuring models | `/docs/user-guide/configuring-models` |
+| Sessions user guide | `/docs/user-guide/sessions` |
+| Profiles user guide | `/docs/user-guide/profiles` |
+| Git worktrees for parallel agents | `/docs/user-guide/git-worktrees` |
+| Docker backend | `/docs/user-guide/docker` |
+| Security model | `/docs/user-guide/security` |
+| Checkpoints & rollback | `/docs/user-guide/checkpoints-and-rollback` |
+| Features overview | `/docs/user-guide/features/overview` |
+| Tools overview | `/docs/user-guide/features/tools` |
+| Skills system | `/docs/user-guide/features/skills` |
+| Curator (skill maintenance) | `/docs/user-guide/features/curator` |
+| Memory | `/docs/user-guide/features/memory` |
+| Memory providers | `/docs/user-guide/features/memory-providers` |
+| Context files (the feature, not the bug) | `/docs/user-guide/features/context-files` |
+| Context references (@-syntax) | `/docs/user-guide/features/context-references` |
+| Personality & SOUL.md | `/docs/user-guide/features/personality` |
+| Plugins | `/docs/user-guide/features/plugins` |
+| Built-in plugins | `/docs/user-guide/features/built-in-plugins` |
+| Cron jobs | `/docs/user-guide/features/cron` |
+| Delegation | `/docs/user-guide/features/delegation` |
+| Kanban multi-agent | `/docs/user-guide/features/kanban` |
+| Persistent goals (Ralph loop) | `/docs/user-guide/features/goals` |
+| Code execution | `/docs/user-guide/features/code-execution` |
+| Hooks | `/docs/user-guide/features/hooks` |
+| Batch processing | `/docs/user-guide/features/batch-processing` |
+| Voice mode | `/docs/user-guide/features/voice-mode` |
+| Browser | `/docs/user-guide/features/browser` |
+| Vision | `/docs/user-guide/features/vision` |
+| Image generation | `/docs/user-guide/features/image-generation` |
+| Text-to-speech | `/docs/user-guide/features/tts` |
+| Messaging platforms overview | `/docs/user-guide/messaging/index` |
+| Telegram setup | `/docs/user-guide/messaging/telegram` |
+| Discord setup | `/docs/user-guide/messaging/discord` |
+| Slack setup (Socket Mode) | `/docs/user-guide/messaging/slack` |
+| WhatsApp setup | `/docs/user-guide/messaging/whatsapp` |
+| Signal setup | `/docs/user-guide/messaging/signal` |
+| Email setup (IMAP/SMTP) | `/docs/user-guide/messaging/email` |
+| SMS setup (Twilio) | `/docs/user-guide/messaging/sms` |
+| Matrix setup | `/docs/user-guide/messaging/matrix` |
+| Mattermost setup | `/docs/user-guide/messaging/mattermost` |
+| Home Assistant setup | `/docs/user-guide/messaging/homeassistant` |
+| Webhooks for messaging | `/docs/user-guide/messaging/webhooks` |
+| Integrations overview | `/docs/integrations/index` |
+| Providers integration | `/docs/integrations/providers` |
+| MCP (Model Context Protocol) | `/docs/user-guide/features/mcp` |
+| ACP (Agent Context Protocol) | `/docs/user-guide/features/acp` |
+| API server (OpenAI-compatible) | `/docs/user-guide/features/api-server` |
+| Honcho memory | `/docs/user-guide/features/honcho` |
+| Provider routing | `/docs/user-guide/features/provider-routing` |
+| Fallback providers | `/docs/user-guide/features/fallback-providers` |
+| Credential pools | `/docs/user-guide/features/credential-pools` |
+| Tips & best practices | `/docs/guides/tips` |
+| Local LLMs on Mac | `/docs/guides/local-llm-on-mac` |
+| Daily briefing bot tutorial | `/docs/guides/daily-briefing-bot` |
+| Team Telegram assistant tutorial | `/docs/guides/team-telegram-assistant` |
+| Use Hermes as a Python library | `/docs/guides/python-library` |
+| Use MCP with Hermes | `/docs/guides/use-mcp-with-hermes` |
+| Use voice mode with Hermes | `/docs/guides/use-voice-mode-with-hermes` |
+| Use SOUL.md with Hermes | `/docs/guides/use-soul-with-hermes` |
+| Build a Hermes plugin | `/docs/guides/build-a-hermes-plugin` |
+| Automate with cron | `/docs/guides/automate-with-cron` |
+| Work with skills | `/docs/guides/work-with-skills` |
+| Delegation patterns | `/docs/guides/delegation-patterns` |
+| GitHub PR review agent | `/docs/guides/github-pr-review-agent` |
+| Architecture (developer) | `/docs/developer-guide/architecture` |
+| Agent loop walkthrough | `/docs/developer-guide/agent-loop` |
+| Prompt assembly | `/docs/developer-guide/prompt-assembly` |
+| Context compression & caching | `/docs/developer-guide/context-compression-and-caching` |
+| Gateway internals | `/docs/developer-guide/gateway-internals` |
+| Session storage | `/docs/developer-guide/session-storage` |
+| Provider runtime | `/docs/developer-guide/provider-runtime` |
+| Adding a tool | `/docs/developer-guide/adding-tools` |
+| Adding a provider | `/docs/developer-guide/adding-providers` |
+| Adding a platform adapter | `/docs/developer-guide/adding-platform-adapters` |
+| Creating a skill | `/docs/developer-guide/creating-skills` |
+| Extending the CLI | `/docs/developer-guide/extending-the-cli` |
+| CLI commands (authoritative) | `/docs/reference/cli-commands` |
+| Slash commands (authoritative) | `/docs/reference/slash-commands` |
+| Profile commands | `/docs/reference/profile-commands` |
+| Environment variables (authoritative) | `/docs/reference/environment-variables` |
+| Tools reference | `/docs/reference/tools-reference` |
+| Toolsets reference | `/docs/reference/toolsets-reference` |
+| MCP config reference | `/docs/reference/mcp-config-reference` |
+| Model catalog | `/docs/reference/model-catalog` |
+| Bundled skills catalog (~90) | `/docs/reference/skills-catalog` |
+| Optional skills catalog (~60) | `/docs/reference/optional-skills-catalog` |
+| FAQ & troubleshooting | `/docs/reference/faq` |

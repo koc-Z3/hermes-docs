@@ -70,6 +70,6 @@ hermes -m openai/gpt-4o-mini -q "ping"
 ## Escalate to T2 when:
 
 - The picker doesn't show the model you want → `hermes-agent/references/providers-and-models.md` (35+ provider profiles)
-- You need to set up Mixture-of-Agents (MoA) properly → `hermes-agent/references/configuration.md` and T3 `/user-guide/features/batch-processing`
-- You want to know which models are bundled with which provider profiles → T3 `/reference/model-catalog`
+- You need to set up Mixture-of-Agents (MoA) properly → `hermes-agent/references/configuration.md` and T3 `/docs/user-guide/features/batch-processing`
+- You want to know which models are bundled with which provider profiles → T3 `/docs/reference/model-catalog`
 - An aux model is failing (vision, summarisation) → `hermes-agent/references/troubleshooting.md`

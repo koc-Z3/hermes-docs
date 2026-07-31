@@ -79,7 +79,7 @@ hermes --profile <name> doctor        # doctor on a specific profile
 
 ## Escalate to T2 when:
 
-- Profile commands don't match this list → T3 `/reference/profile-commands` (authoritative)
+- Profile commands don't match this list → T3 `/docs/reference/profile-commands` (authoritative)
 - Cross-profile workflows (delegate between profiles) → `hermes-agent/references/background-systems.md`
-- Profile paths / per-platform profile setup → T3 `/user-guide/profiles`
-- Kanban across profiles → T3 `/user-guide/features/kanban`
+- Profile paths / per-platform profile setup → T3 `/docs/user-guide/profiles`
+- Kanban across profiles → T3 `/docs/user-guide/features/kanban`

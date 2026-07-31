@@ -80,5 +80,5 @@ hermes doctor
 
 - You need a full subcommand list (gateway, sessions, cron, profiles, auth, moa, hooks, security, backup, etc.) → `hermes-agent/references/cli-reference.md`
 - You're scripting and need the exact flag contract → `hermes-agent/references/cli-reference.md` "Where to Find Things" section
-- A flag is rejected and the error message is unclear → T3 `/reference/cli-commands`
+- A flag is rejected and the error message is unclear → T3 `/docs/reference/cli-commands`
 - The flag is documented but doesn't behave as documented (drift) → `hermes-agent/references/troubleshooting.md`

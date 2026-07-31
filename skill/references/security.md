@@ -64,7 +64,7 @@ hermes doctor                        # verify config is sane
 
 ## Escalate to T2 when:
 
-- Need to understand the full security model (dangerous-command detection, container isolation, user authorisation) → T3 `/user-guide/security`
+- Need to understand the full security model (dangerous-command detection, container isolation, user authorisation) → T3 `/docs/user-guide/security`
 - A specific toggle isn't being respected → `hermes-agent/references/security-privacy.md` and `hermes-agent/references/troubleshooting.md`
-- Setting up sandboxed execution (Docker backend, SSH backend) → `hermes-agent/references/configuration.md` and T3 `/user-guide/docker`
-- Production deployment / threat model → T3 `/user-guide/security` and `/docs/observability/`
+- Setting up sandboxed execution (Docker backend, SSH backend) → `hermes-agent/references/configuration.md` and T3 `/docs/user-guide/docker`
+- Production deployment / threat model → T3 `/docs/user-guide/security`

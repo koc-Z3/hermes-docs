@@ -60,8 +60,8 @@ hermes -q "echo $HOSTNAME"           # verify which host is actually running
 
 ## Escalate to T2 when:
 
-- Setting up Docker backend from scratch → T3 `/user-guide/docker`
+- Setting up Docker backend from scratch → T3 `/docs/user-guide/docker`
 - SSH backend config (jump hosts, keys, port forwarding) → `hermes-agent/references/configuration.md`
-- Daytona / Modal / Singularity setup → T3 `/getting-started/installation` (per-backend notes)
-- Sandbox not isolating as expected → T3 `/user-guide/security`
+- Daytona / Modal / Singularity setup → T3 `/docs/getting-started/installation` (per-backend notes)
+- Sandbox not isolating as expected → T3 `/docs/user-guide/security`
 - A backend command fails → `hermes-agent/references/troubleshooting.md`

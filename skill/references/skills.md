@@ -87,8 +87,8 @@ hermes skills inspect hermes-docs     # this skill's metadata
 
 ## Escalate to T2 when:
 
-- Authoring a new skill (full SKILL.md format, routing tables) → `hermes-agent/SKILL.md` "Routing Table" section + T3 `/developer-guide/creating-skills`
-- Need the full bundled-skills catalog (~90 skills) → T3 `/reference/skills-catalog`
-- Need the optional / installable skills catalog (~60) → T3 `/reference/optional-skills-catalog`
+- Authoring a new skill (full SKILL.md format, routing tables) → `hermes-agent/SKILL.md` "Routing Table" section + T3 `/docs/developer-guide/creating-skills`
+- Need the full bundled-skills catalog (~90 skills) → T3 `/docs/reference/skills-catalog`
+- Need the optional / installable skills catalog (~60) → T3 `/docs/reference/optional-skills-catalog`
 - A skill fails to load → `hermes-agent/references/troubleshooting.md`
-- Need the curator (background maintenance) details → T3 `/user-guide/features/curator`
+- Need the curator (background maintenance) details → T3 `/docs/user-guide/features/curator`

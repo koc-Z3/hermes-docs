@@ -74,6 +74,6 @@ hermes config get display.interface
 
 - Building a custom TUI widget (clock, ticker, dashboard panel) → `hermes-agent/references/tui-widgets.md` + `templates/clock.mjs`
 - Building a desktop app plugin (pane, ⌘K command, page) → `hermes-agent/references/desktop-plugins.md` + `templates/plugin.js`
-- Choosing between API server vs ACP for an integration → T3 `/user-guide/features/api-server` and `/user-guide/features/acp`
+- Choosing between API server vs ACP for an integration → T3 `/docs/user-guide/features/api-server` and `/docs/user-guide/features/acp`
 - A surface isn't launching → `hermes-agent/references/troubleshooting.md`
-- TUI walkthrough / keybindings → T3 `/user-guide/tui`
+- TUI walkthrough / keybindings → T3 `/docs/user-guide/tui`

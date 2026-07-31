@@ -59,6 +59,6 @@ hermes --ignore-rules -q "what's my project context"   # compare
 ## Escalate to T2 when:
 
 - Precedence rules / conflict between files → `hermes-agent/references/project-context-files.md`
-- SOUL.md vs AGENTS.md boundary / how they differ → T3 `/user-guide/features/personality` and `/guides/use-soul-with-hermes`
+- SOUL.md vs AGENTS.md boundary / how they differ → T3 `/docs/user-guide/features/personality` and `/docs/guides/use-soul-with-hermes`
 - A project file isn't being loaded → `hermes-agent/references/troubleshooting.md`
-- Custom context sources → T3 `/user-guide/features/context-files` and `/user-guide/features/context-references`
+- Custom context sources → T3 `/docs/user-guide/features/context-files` and `/docs/user-guide/features/context-references`

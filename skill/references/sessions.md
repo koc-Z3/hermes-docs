@@ -68,7 +68,7 @@ hermes sessions stats
 
 ## Escalate to T2 when:
 
-- Configuring session policy (retention, per-platform, cross-profile) → T3 `/user-guide/sessions` and `hermes-agent/references/configuration.md`
-- Session storage internals (FTS5, schema, migrations) → T3 `/developer-guide/session-storage`
+- Configuring session policy (retention, per-platform, cross-profile) → T3 `/docs/user-guide/sessions` and `hermes-agent/references/configuration.md`
+- Session storage internals (FTS5, schema, migrations) → T3 `/docs/developer-guide/session-storage`
 - Cross-profile session routing → `hermes-agent/references/background-systems.md` "Delegation" section
 - A session is corrupted and `hermes sessions` errors → `hermes-agent/references/troubleshooting.md`

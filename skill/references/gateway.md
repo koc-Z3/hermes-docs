@@ -57,6 +57,6 @@ tail -50 ~/.hermes/logs/gateway.log
 
 - Adding a new platform from scratch (OAuth flow, bot token, allowed users) → T3 `/user-guide/messaging/<platform>` (one URL per platform)
 - Gateway is crashing on startup → `hermes-agent/references/troubleshooting.md`
-- A specific platform isn't listed in the picker → T3 `/integrations/providers` (custom adapters)
+- A specific platform isn't listed in the picker → T3 `/docs/integrations/providers` (custom adapters)
 - Webhook routing config → `hermes-agent/references/webhooks.md`
-- Authoring a new platform adapter → T3 `/developer-guide/adding-platform-adapters`
+- Authoring a new platform adapter → T3 `/docs/developer-guide/adding-platform-adapters`

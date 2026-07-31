@@ -65,4 +65,4 @@ hermes logs --filter webhook         # recent webhook deliveries
 - Need to author a webhook subscription from scratch (HMAC, payload shape, retry) → `hermes-agent/references/webhooks.md`
 - Webhook isn't firing → `hermes-agent/references/troubleshooting.md`
 - Need webhook payloads for a specific source (GitHub, GitLab, Stripe) → `hermes-agent/references/webhooks.md`
-- Setting up webhook delivery to a messaging platform → T3 `/user-guide/messaging/webhooks`
+- Setting up webhook delivery to a messaging platform → T3 `/docs/user-guide/messaging/webhooks`

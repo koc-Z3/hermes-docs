@@ -91,6 +91,6 @@ hermes auth status              # show which keys are exhausted
 ## Escalate to T2 when:
 
 - A provider isn't in the picker (custom endpoint, on-prem LLM) → `hermes-agent/references/providers-and-models.md` for the full profile list
-- You need fallback chains (`primary fails → fallback`) → `hermes-agent/references/configuration.md` and T3 `/user-guide/features/fallback-providers`
-- You need credential pool details (rotation policy, exhausted-key detection) → T3 `/user-guide/features/credential-pools`
-- A provider's auth is failing and `hermes doctor` doesn't explain it → T3 `/reference/faq`
+- You need fallback chains (`primary fails → fallback`) → `hermes-agent/references/configuration.md` and T3 `/docs/user-guide/features/fallback-providers`
+- You need credential pool details (rotation policy, exhausted-key detection) → T3 `/docs/user-guide/features/credential-pools`
+- A provider's auth is failing and `hermes doctor` doesn't explain it → T3 `/docs/reference/faq`

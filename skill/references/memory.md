@@ -64,7 +64,7 @@ hermes memory search "your topic"
 
 ## Escalate to T2 when:
 
-- Setting up an external memory provider (Honcho, etc.) → T3 `/user-guide/features/memory-providers`
-- Honcho-specific config (dialectic reasoning, multi-agent user modelling) → T3 `/user-guide/features/honcho`
+- Setting up an external memory provider (Honcho, etc.) → T3 `/docs/user-guide/features/memory-providers`
+- Honcho-specific config (dialectic reasoning, multi-agent user modelling) → T3 `/docs/user-guide/features/honcho`
 - Memory is causing context bloat → `hermes-agent/references/troubleshooting.md`
 - Conflict between MEMORY.md and USER.md → `hermes-agent/references/configuration.md`
