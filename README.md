@@ -70,8 +70,50 @@ The bundled `hermes-agent/` tier is a verbatim copy of [NousResearch/hermes-agen
 
 The T1 `references/` tier is maintained here and is intentionally focused on **agent self-config** — not a general-purpose Hermes reference. The general reference lives in T2 (and the live docs in T3).
 
+### Re-syncing T2 (the deep tier) from upstream
+
+```bash
+# From the repo root
+cd "$(mktemp -d)"                              # extract into a temp dir to avoid polluting cwd
+curl -fsSL "https://codeload.github.com/NousResearch/hermes-agent/tar.gz/refs/heads/main" \
+  | tar -xz --strip-components=4 \
+      "hermes-agent-main/skills/autonomous-ai-agents/hermes-agent"
+rm -rf skill/hermes-agent
+mv hermes-agent skill/hermes-agent             # move the extracted subtree into the repo
+```
+
+This pulls the latest `SKILL.md`, `references/`, and `templates/` from NousResearch's `main` branch. After syncing, run the validation (below) to make sure the T1 routing table still lines up.
+
+> **Why a temp dir?** `tar --strip-components=N` rewrites the path inside the archive; the result lands in the current working directory. Extracting into a temp dir keeps your repo clean of stray `SKILL.md` / `references/` files at the top level.
+
+### Validating T3 path references
+
+Every T1 file may reference live docs paths in T3 (the form `https://hermes-agent.nousresearch.com/docs/...`). These drift: pages get renamed, restructured, removed. Two scripts catch drift:
+
+```bash
+# Fast offline check (~1s). Validates paths against the cached llms.txt.
+bash scripts/check_t3_paths.sh
+
+# Slower live check (~30s). Actually fetches each URL and verifies 200.
+bash scripts/check_t3_paths.sh --live
+
+# Force-refresh the llms.txt cache (it auto-refreshes if >24h stale).
+bash scripts/check_t3_paths.sh --refresh
+```
+
+The check runs in CI on every push and PR (see `.github/workflows/check.yml`). The live HTTP check runs nightly and on manual dispatch to catch paths that the catalogue lists but the docs site no longer serves.
+
+### Fixing path drift
+
+If the validator reports missing or broken paths, two options:
+
+- **Repair by hand** for a small number of paths — update the T1 file or `INDEX.md`, re-run the validator.
+- **Auto-fix** for many paths at once — `scripts/fix_t3_paths.py` is a one-shot fixer that promotes bare paths to `/docs/...` form when the catalogue has them. Review the diff before committing; the script doesn't change the meaning of any path, only the prefix.
+
 ## See also
 
 - The live docs: https://hermes-agent.nousresearch.com/docs
 - The bundled `hermes-agent` skill: https://github.com/NousResearch/hermes-agent/tree/main/skills/autonomous-ai-agents/hermes-agent
 - Worked examples: `skill/examples/`
+- CI status: `.github/workflows/check.yml`
+- Validation scripts: `scripts/check_t3_paths.sh`, `scripts/fix_t3_paths.py`

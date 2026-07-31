@@ -70,8 +70,50 @@ hermes-docs/
 
 T1 的 `references/` 层级在此处维护，刻意聚焦于**代理自身配置**——并非通用的 Hermes 参考。通用参考位于 T2（以及 T3 的实时文档）。
 
+### 从上游重新同步 T2（深度层级）
+
+```bash
+# 在仓库根目录执行
+cd "$(mktemp -d)"                              # 解压到临时目录，避免污染当前工作目录
+curl -fsSL "https://codeload.github.com/NousResearch/hermes-agent/tar.gz/refs/heads/main" \
+  | tar -xz --strip-components=4 \
+      "hermes-agent-main/skills/autonomous-ai-agents/hermes-agent"
+rm -rf skill/hermes-agent
+mv hermes-agent skill/hermes-agent             # 将解压出的子树移入仓库
+```
+
+此命令从 NousResearch 的 `main` 分支拉取最新的 `SKILL.md`、`references/` 和 `templates/`。同步完成后，运行下面的校验脚本以确保 T1 路由表仍然对齐。
+
+> **为什么要用临时目录？** `tar --strip-components=N` 会重写归档内的路径，结果会落在当前工作目录。解压到临时目录可以避免 `SKILL.md` / `references/` 等文件散落在仓库顶层。
+
+### 校验 T3 路径引用
+
+每个 T1 文件都可能引用 T3 形式的实时文档路径（即 `https://hermes-agent.nousresearch.com/docs/...`）。这些会随时间漂移：页面被改名、重构、删除。有两个脚本可捕获漂移：
+
+```bash
+# 快速离线检查（约 1 秒）。对照缓存的 llms.txt 校验路径。
+bash scripts/check_t3_paths.sh
+
+# 较慢的实时检查（约 30 秒）。实际请求每个 URL 验证返回 200。
+bash scripts/check_t3_paths.sh --live
+
+# 强制刷新 llms.txt 缓存（缓存超过 24 小时会自动刷新）。
+bash scripts/check_t3_paths.sh --refresh
+```
+
+该检查在每次 push 和 PR 时通过 CI 运行（参见 `.github/workflows/check.yml`）。实时 HTTP 检查每晚及手动触发时运行，以捕获目录中列出但文档站点已不再提供的路径。
+
+### 修复路径漂移
+
+如果校验脚本报告缺失或损坏的路径，有两种选择：
+
+- **手动修复**（路径数量少时）—— 更新对应的 T1 文件或 `INDEX.md`，再次运行校验脚本。
+- **自动修复**（路径数量多时）—— `scripts/fix_t3_paths.py` 是一次性修复脚本，当目录中存在相应路径时，它会将裸路径升级为 `/docs/...` 形式。提交前请检查 diff；该脚本只更改路径的前缀，不改变任何路径的含义。
+
 ## 另请参阅
 
 - 实时文档：https://hermes-agent.nousresearch.com/docs
 - 打包的 `hermes-agent` 技能：https://github.com/NousResearch/hermes-agent/tree/main/skills/autonomous-ai-agents/hermes-agent
 - 配置示例：`skill/examples/`
+- CI 状态：`.github/workflows/check.yml`
+- 校验脚本：`scripts/check_t3_paths.sh`、`scripts/fix_t3_paths.py`
