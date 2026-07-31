@@ -38,7 +38,7 @@ When the agent has a Hermes question, the orchestrator (`skill/hermes-docs.md`) 
 ```
 hermes-docs/
 ├── README.md                  ← this file
-├── README.zh-CN.md            ← 中文版
+├── README.zh-CN.md            ← Chinese Version
 └── skill/
     ├── hermes-docs.md         ← the orchestrator (router logic)
     ├── INDEX.md               ← topic → tier routing table
